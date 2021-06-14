@@ -1,0 +1,15 @@
+classifier,mean_test_score,mean_fit_time,params
+LogisticRegression,0.6937579919488515,0.8882969856262207,"{'estimator__C': 0.1, 'estimator__penalty': 'l2'}"
+LogisticRegression,0.7325882074354724,1.4641667366027833,"{'estimator__C': 1.0, 'estimator__penalty': 'l2'}"
+LogisticRegression,0.7442386928723655,1.9951780319213868,"{'estimator__C': 10.0, 'estimator__penalty': 'l2'}"
+DecisionTreeClassifier,0.7812313521193464,0.09093132019042968,"{'estimator__criterion': 'gini', 'estimator__max_depth': 10}"
+DecisionTreeClassifier,0.7890078143499881,0.11866393089294433,"{'estimator__criterion': 'gini', 'estimator__max_depth': 20}"
+DecisionTreeClassifier,0.7695287710158655,0.0837170124053955,"{'estimator__criterion': 'entropy', 'estimator__max_depth': 10}"
+DecisionTreeClassifier,0.7656642197489936,0.10072574615478516,"{'estimator__criterion': 'entropy', 'estimator__max_depth': 20}"
+GradientBoostingClassifier,0.7880416765332702,8.334076309204102,"{'estimator__learning_rate': 0.01, 'estimator__max_depth': 10}"
+GradientBoostingClassifier,0.790940089983424,12.874860858917236,"{'estimator__learning_rate': 0.01, 'estimator__max_depth': 20}"
+GradientBoostingClassifier,0.799701633909543,7.8910719871521,"{'estimator__learning_rate': 0.1, 'estimator__max_depth': 10}"
+GradientBoostingClassifier,0.8026142552687661,14.150865507125854,"{'estimator__learning_rate': 0.1, 'estimator__max_depth': 20}"
+GradientBoostingClassifier,0.8045654747809614,6.855074644088745,"{'estimator__learning_rate': 0.5, 'estimator__max_depth': 10}"
+GradientBoostingClassifier,0.7967653327018707,9.940405178070069,"{'estimator__learning_rate': 0.5, 'estimator__max_depth': 20}"
+GaussianNB,0.7461851764148708,0.10073204040527343,{}

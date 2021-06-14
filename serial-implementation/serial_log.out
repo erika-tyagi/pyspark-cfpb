@@ -1,0 +1,108 @@
+ ---------- LOADING DATA ---------- 
+
+Date range: 2013-01-01 00:00:00 to 2020-05-22 00:00:00
+Number of complaints: 1503408
+
+
+Distribution of company response: 
+Closed with explanation            0.811728
+Closed with non-monetary relief    0.130335
+Closed with monetary relief        0.053124
+Untimely response                  0.004813
+Name: company_response_to_consumer, dtype: float64
+
+
+Number of unique values in each column: 
+date_received                      2698
+product                              18
+sub-product                          76
+issue                               166
+sub-issue                           218
+consumer_complaint_narrative     496368
+company_public_response              10
+company                            5547
+state                                63
+zip_code                          23411
+tags                                  3
+consumer_consent_provided             4
+submitted_via                         6
+date_sent_to_company               2697
+company_response_to_consumer          4
+timely_response                       2
+consumer_disputed                     2
+complaint_id                    1503408
+week                                387
+dtype: int64
+
+ ---------- RESAMPLING TRAINING DATA ---------- 
+
+Distribution of training labels: 
+Untimely response                  0.25
+Closed with non-monetary relief    0.25
+Closed with explanation            0.25
+Closed with monetary relief        0.25
+Name: company_response_to_consumer, dtype: float64
+
+
+Training samples: 103992
+Testing samples: 40000
+Time elapsed: 1488.2136011123657
+
+ ---------- TRAINING MODELS ---------- 
+
+Classifier: LogisticRegression
+Best score: 0.703959033921502
+Best parameters: {'estimator__C': 10.0, 'estimator__penalty': 'l2'}
+Time elapsed: 2070.681219100952
+
+
+Classifier: DecisionTreeClassifier
+Best score: 0.7432977544685728
+Best parameters: {'estimator__criterion': 'gini', 'estimator__max_depth': 20}
+Time elapsed: 5070.7255218029022
+
+
+Classifier: SVC
+Best score: 0.8045654747809614
+Best parameters: {'estimator__C': 0.1, 'estimator__kernel': 'linear'}
+Time elapsed: 27611.154981136322
+
+
+Classifier: GradientBoostingClassifier
+Best score: 0.8045654747809614
+Best parameters: {'estimator__learning_rate': 0.5, 'estimator__max_depth': 10}
+Time elapsed: 16312.154981136322
+
+
+Classifier: GaussianNB
+Best score: 0.7461851764148708
+Best parameters: {}
+Time elapsed: 124.8065972328186035
+
+
+Overall best classifier: GradientBoostingClassifier
+Overall best score 0.8045654747809614
+Best parameters: {'estimator__learning_rate': 0.5, 'estimator__max_depth': 10}
+
+ ---------- EVALUATING PREDICTIONS ---------- 
+
+                                 precision    recall  f1-score   
+
+        Closed with explanation       0.87      0.68      0.76       
+    Closed with monetary relief       0.25      0.54      0.35       
+Closed with non-monetary relief       0.21      0.39      0.28       
+              Untimely response       0.00      0.00      0.00        
+
+                       accuracy                           0.64       
+                      macro avg       0.33      0.40      0.35       
+                   weighted avg       0.75      0.64      0.68       
+
+
+ ---------- EVALUATING PROBABILITIES ---------- 
+
+                                 Closed with explanation  Closed with monetary relief  Closed with non-monetary relief  Untimely response
+y_true                                                                                                                                   
+Closed with explanation                            0.684                        0.101                            0.195              0.019
+Closed with monetary relief                        0.344                        0.455                            0.200              0.001
+Closed with non-monetary relief                    0.545                        0.088                            0.365              0.001
+Untimely response                                  0.997                        0.000                            0.003              0.000

@@ -1,0 +1,5 @@
+classifier,mean_test_score,time,params
+LogisticRegression,0.7442386928723655,23.94408130645752,"{'estimator__C': 10.0, 'estimator__penalty': 'l2'}"
+DecisionTreeClassifier,0.7890078143499881,2.4902188777923584,"{'estimator__criterion': 'gini', 'estimator__max_depth': 20}"
+GradientBoostingClassifier,0.8045654747809614,310.154981136322,"{'estimator__learning_rate': 0.5, 'estimator__max_depth': 10}"
+GaussianNB,0.7461851764148708,0.8065972328186035,{}
